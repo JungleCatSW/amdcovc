@@ -41,7 +41,7 @@
 #include <CL/cl.h>
 #endif
 extern "C" {
-#include <pci/pci.h>
+#include "pciutils/pciutils.h"
 }
 
 #ifdef __linux__

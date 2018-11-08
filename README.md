@@ -1,3 +1,7 @@
+git submodule add https://github.com/pciutils/pciutils.git
+cd pciutils
+make ZLIB=no DNS=no
+
 ## AMDCOVC
 
 This is program to control AMD Overdrive settings that is working if graphics cards
