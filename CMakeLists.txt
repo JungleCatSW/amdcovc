@@ -7,12 +7,12 @@ if(HAVE_ADLSDK)
     messge("do something")
 endif()
 
-## Find PCI UTILS Lib
-#set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
-#find_package(PCIUTILS REQUIRED)
+# First do ->
+# $ git submodule update --init --recursive
+# $ cd pciutils
+# $ make ZLIB=no DNS=no
 include_directories(pciutils)
 link_directories(pciutils/lib)
-#set(PCIUTILS_LIB /pciutils/libpci.a)
 
 add_executable(${PROJECT_NAME} amdcovc.cpp)
 target_link_libraries(${PROJECT_NAME} pci)
